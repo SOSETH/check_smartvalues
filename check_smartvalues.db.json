@@ -1,19 +1,12 @@
 {
-		"Controller" : [
-			{ "ID" : "megaraid",    "RE" : "megaraid,(\\d+)\\s+.*", "ShortName" : "LSI MegaRAID" },
-			{ "ID" : "3ware",       "RE" : "3ware,(\\d+)\\s+.*",    "ShortName" : "3ware RAID" },
-			{ "ID" : "areca",       "RE" : "areca,(\\d+)\\s+.*",    "ShortName" : "Areca SATA RAID" },
-			{ "ID" : "cciss",       "RE" : "cciss,(\\d+)\\s+.*",    "ShortName" : "cciss RAID"  },
-			{ "ID" : "hpt",         "RE" : "hpt,(\\d+)\\s+.*",      "ShortName" : "HighPoint RocketRAID" }
-		],
-		"Devices" : {
-			"DEMO DEVICE" : {
-				"Device" : [ "IDENTIFIER" ],
-				"ID#" : [
-					{ "1" : "RV", "CR": 0, "Name" : "Attribute 1", "Desc" : "does this" },
-					{ "2" : "NV", "CR": 1, "Name" : "Attribute 2", "Desc" : "does that" }
-				]
-		},
+	"Controller" : [
+		{ "ID" : "megaraid",    "RE" : "megaraid,(\\d+)\\s+.*", "ShortName" : "LSI MegaRAID" },
+		{ "ID" : "3ware",       "RE" : "3ware,(\\d+)\\s+.*",    "ShortName" : "3ware RAID" },
+		{ "ID" : "areca",       "RE" : "areca,(\\d+)\\s+.*",    "ShortName" : "Areca SATA RAID" },
+		{ "ID" : "cciss",       "RE" : "cciss,(\\d+)\\s+.*",    "ShortName" : "cciss RAID"  },
+		{ "ID" : "hpt",         "RE" : "hpt,(\\d+)\\s+.*",      "ShortName" : "HighPoint RocketRAID" }
+	],
+	"Devices" : {
 		"Intel S3700" : {
 			"Device" : [ "INTEL SSDSC2BA100G3" ],
 			"ID#" : [
@@ -42,6 +35,37 @@
 				{ "234" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
 				{ "241" : "NV", "CR" : 0, "Name" : "Total_LBAs_Written" },
 				{ "242" : "NV", "CR" : 0, "Name" : "Total_LBAs_Read" }
+			]
+		},
+		"Intel S3710" : {
+			"Device" : [ "INTEL SSDSC2BA200G4", "INTEL SSDSC2BA400G4"],
+			"ID#" : [
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Ct" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "12" : "NV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "170" : "NV", "CR" : 0, "Name" : "Available_Reservd_Space" },
+				{ "171" : "NV", "CR" : 0, "Name" : "Program_Fail_Count" },
+				{ "172" : "NV", "CR" : 0, "Name" : "Erase_Fail_Count" },
+				{ "174" : "NV", "CR" : 0, "Name" : "Unsafe_Shutdown_Count" },
+				{ "175" : "NV", "CR" : 0, "Name" : "Power_Loss_Cap_Test" },
+				{ "183" : "NV", "CR" : 0, "Name" : "SATA_Downshift_Count" },
+				{ "184" : "NV", "CR" : 0, "Name" : "End-to-End_Error" },
+				{ "187" : "NV", "CR" : 0, "Name" : "Reported_Uncorrect" },
+				{ "190" : "RV", "CR" : 0, "Name" : "Temperature_Case" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Unsafe_Shutdown_Count" },
+				{ "194" : "RV", "CR" : 0, "Name" : "Temperature_Internal" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "199" : "NV", "CR" : 0, "Name" : "CRC_Error_Count" },
+				{ "225" : "NV", "CR" : 0, "Name" : "Host_Writes_32MiB" },
+				{ "226" : "NV", "CR" : 0, "Name" : "Workld_Media_Wear_Indic" },
+				{ "227" : "NV", "CR" : 0, "Name" : "Workld_Host_Reads_Perc" },
+				{ "228" : "NV", "CR" : 0, "Name" : "Workload_Minutes" },
+				{ "232" : "NV", "CR" : 0, "Name" : "Available_Reservd_Space" },
+				{ "233" : "NV", "CR" : 0, "Name" : "Media_Wearout_Indicator" },
+				{ "234" : "NV", "CR" : 0, "Name" : "Thermal_Throttle" },
+				{ "241" : "RV", "CR" : 0, "Name" : "Total_LBAs_Written" },
+				{ "242" : "RV", "CR" : 0, "Name" : "Total_LBAs_Read" },
+				{ "243" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" }
 			]
 		},
 		"Intel 320" : {
@@ -182,6 +206,32 @@
 				{ "249": "NV", "CR" : 0, "Name" : "Total_NAND_Writes" }
 			]
 		},
+		"Intel SSD 710 Series" : {
+			"Device" : ["INTEL SSDSA2BZ100G3"],
+			"ID#" : [
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_sector_count", "Desc" : "" },
+				{ "9" : "NV", "CR" : 0, "Name" : "Power_on_hours" },
+				{ "12": "NV", "CR" : 0, "Name" : "Power-cycle_counts" },
+				{ "170": "NV", "CR" : 0, "Name" : "Reserved_block_count" },
+				{ "171": "NV", "CR" : 0, "Name" : "Program_Fail_Count" },
+				{ "172": "NV", "CR" : 0, "Name" : "Erase_Fail_Count" },
+				{ "174": "NV", "CR" : 0, "Name" : "Unexpected_Power_Loss" },
+				{ "183": "NV", "CR" : 0, "Name" : "SATA-Downshift_Count" },
+				{ "184" : "NV", "CR" : 0, "Name" : "End-to-End_Error_Detection" },
+				{ "187" : "NV", "CR" : 0, "Name" : "Uncorrectable-Error_Count" },
+				{ "190" : "RV", "CR" : 0, "Name" : "Temperature_case" },
+				{ "192": "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count_(Unsafe_Shutdown_Count)" },
+				{ "194" : "RV", "CR" : 0, "Name" : "Temperature_device" },
+				{ "199": "NV", "CR" : 0, "Name" : "CRC-Error_Count" },
+				{ "225": "NV", "CR" : 0, "Name" : "Host_Writes" },
+				{ "226": "NV", "CR" : 0, "Name" : "Timed_Workload_Media_Wear" },
+				{ "227": "NV", "CR" : 0, "Name" : "Timed_Workload_Host_Read/Write _Ratio" },
+				{ "232" : "NV", "CR" : 0, "Name" : "Available_Reserved_Space" },
+				{ "233" : "NV", "CR" : 0, "Name" : "Media_Wearout_Indicator" },
+				{ "241": "RV", "CR" : 0, "Name" : "Total_32MBs_Written" },
+				{ "242": "RV", "CR" : 0, "Name" : "Total_32MBs_Read" }
+			]
+		},
 		"Samsung SSD 840 Series" : {
 			"Device" : ["Samsung SSD 840 Series"],
 			"ID#": [
@@ -239,6 +289,25 @@
 				{ "241" : "NV", "CR" : 0, "Name" : "Total_LBAs_Written" }
 			]
 		},
+		"Samsung SSD 850 PRO": {
+			"Device" : ["Samsung SSD 850 PRO 1TB"],
+			"ID#": [
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Ct" },
+				{ "9" : "RV", "CR" : 1, "Name" : "Power_On_Hours" },
+				{ "12" : "RV", "CR" : 1, "Name" : "Power_Cycle_Count" },
+				{ "177" : "NV", "CR" : 0, "Name" : "Wear_Leveling_Count" },
+				{ "179" : "NV", "CR" : 0, "Name" : "Used_Rsvd_Blk_Cnt_Tot" },
+				{ "181" : "NV", "CR" : 0, "Name" : "Program_Fail_Cnt_Total" },
+				{ "182" : "NV", "CR" : 0,  "Name" : "Erase_Fail_Count_Total" },
+				{ "183" : "NV", "CR" : 0, "Name" : "Runtime_Bad_Block" },
+				{ "187" : "NV", "CR" : 0, "Name" : "Reported_Uncorrect" },
+				{ "190" : "RV", "CR" : 1, "Name" : "Airflow_Temperature_Cel" },
+				{ "195" : "NV", "CR" : 0, "Name" : "Hardware_ECC_Recovered" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" },
+				{ "235" : "NV", "CR" : 0, "Name" : "Power_Recovery_Count" },
+				{ "241" : "RV", "CR" : 1, "Name" : "Total_LBAs_Written" }
+			]
+		},
 		"Samsung Enterprise (PM863,PM853T)": {
 			"Device" : ["SAMSUNG MZ7LM240HCGR-00003", "SAMSUNG MZ7GE480HMHP-00003", "SAMSUNG MZ7GE240HMGR-00003"],
 			"ID#": [
@@ -263,6 +332,313 @@
 				{ "246" : "NV", "CR" : 0, "Name" : "Unknown" },
 				{ "247" : "NV", "CR" : 0, "Name" : "Unknown" },
 				{ "251" : "NV", "CR" : 0, "Name" : "Unknown" }
+			]
+		},
+		"Lenovo Samsung Magic OEM Edition" : {
+			"Device" : ["SAMSUNG MZ7TD512HAGM-000L1"],
+			"ID#": [
+				{ "9" : "RV", "CR" : 1, "Name" : "Power_On_Hours" },
+				{ "12" : "RV", "CR" : 1, "Name" : "Power_Cycle_Count" },
+				{ "175" : "NV", "CR" : 0, "Name" : "Program_Fail_Count_Chip" },
+				{ "176" : "NV", "CR" : 0, "Name" : "Erase_Fail_Count_Chip" },
+				{ "177" : "NV", "CR" : 0, "Name" : "Wear_Leveling_Count" },
+				{ "178" : "NV", "CR" : 0, "Name" : "Used_Rsvd_Blk_Cnt_Chip" },
+				{ "179" : "NV", "CR" : 0, "Name" : "Used_Rsvd_Blk_Cnt_Tot" },
+				{ "180" : "NV", "CR" : 0, "Name" : "Unused_Rsvd_Blk_Cnt_Tot" },
+				{ "181" : "NV", "CR" : 0, "Name" : "Program_Fail_Cnt_Total" },
+				{ "182" : "NV", "CR" : 0, "Name" : "Erase_Fail_Count_Total" },
+				{ "183" : "NV", "CR" : 0, "Name" : "Runtime_Bad_Block" },
+				{ "184" : "NV", "CR" : 0, "Name" : "End-to-End_Error" },
+				{ "187" : "NV", "CR" : 0, "Name" : "Reported_Uncorrect" },
+				{ "190" : "RV", "CR" : 1, "Name" : "Airflow_Temperature_Cel" },
+				{ "195" : "NV", "CR" : 0, "Name" : "Hardware_ECC_Recovered" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" },
+				{ "233" : "NV", "CR" : 0, "Name" : "Media_Wearout_Indicator" },
+				{ "234" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "235" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "236" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "237" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "238" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" }
+			]
+		},
+		
+		"Radeon R7": {
+			"Device" : ["Radeon R7"],
+			"ID#": [
+				{ "5" : "NV", "CR" : 1, "Name" : "Reallocated_Sector_Ct" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "171" : "NV", "CR" : 0, "Name" : "Unknown" },
+				{ "174" : "NV", "CR" : 0, "Name" : "Unknown" },
+				{ "195" : "RV", "CR" : 1, "Name" : "Hardware_ECC_Recovered" },
+				{ "196" : "RV", "CR" : 1, "Name" : "Reallocated_Event_Count" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "208" : "NV", "CR" : 0, "Name" : "Unknown_SSD" },
+				{ "210" : "NV", "CR" : 0, "Name" : "Unknown" },
+				{ "224" : "NV", "CR" : 0, "Name" : "Unknown_SSD" },
+				{ "233" : "NV", "CR" : 0, "Name" : "Media_Wearout_Indicator" },
+				{ "241" : "RV", "CR" : 0, "Name" : "Total_LBAs_Written" },
+				{ "242" : "RV", "CR" : 0, "Name" : "Total_LBAs_Read" },
+				{ "249" : "NV", "CR" : 0, "Name" : "Unknown" }
+			]
+		},
+		"Western Digital Red (AF)": {
+			"Device" :  ["WDC WD40EFRX-68WT0N0", "WDC WD10EFRX-68JCSN0"],
+			"ID#": [
+				{ "1" : "RV", "CR" : 1, "Name" : "Raw_Read_Error_Rate" },
+				{ "3" : "NV", "CR" : 1, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "RV", "CR" : 1, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "RV", "CR" : 1, "Name" : "Seek_Error_Rate" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "RV", "CR" : 1, "Name" : "Spin_Retry_Count" },
+				{ "11" : "RV", "CR" : 1, "Name" : "Calibration_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "193" : "RV", "CR" : 0, "Name" : "Load_Cycle_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "196" : "RV", "CR" : 1, "Name" : "Reallocated_Event_Count" },
+				{ "197" : "RV", "CR" : 1, "Name" : "Current_Pending_Sector" },
+				{ "198" : "RV", "CR" : 1, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "RV", "CR" : 1, "Name" : "UDMA_CRC_Error_Count" },
+				{ "200" : "RV", "CR" : 1, "Name" : "Multi_Zone_Error_Rate" }
+			]
+		},
+		"Misc mSATA SSD": {
+			"Device": ["SATA SSD"],
+			"ID#": [
+				{ "1" : "RV", "CR" : 1, "Name" : "Raw_Read_Error_Rate" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "168" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "170" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "173" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "196" : "RV", "CR" : 1, "Name" : "Reallocated_Event_Count" },
+				{ "218" : "NV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "241" : "RV", "CR" : 1, "Name" : "Total_LBAs_Written" }
+			]
+		},
+		"Barracuda 7200.12": {
+			"Device": ["ST31000524AS", "ST2000DM001-1E6164", "ST2000DM001-9YN164"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "183" : "NV", "CR" : 0, "Name" : "Runtime_Bad_Block" },
+				{ "184" : "NV", "CR" : 0, "Name" : "End-to-End_Error" },
+				{ "187" : "NV", "CR" : 0, "Name" : "Reported_Uncorrect" },
+				{ "188" : "RV", "CR" : 1, "Name" : "Command_Timeout" },
+				{ "189" : "NV", "CR" : 0, "Name" : "High_Fly_Writes" },
+				{ "190" : "RV", "CR" : 1, "Name" : "Airflow_Temperature_Cel" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "195" : "NV", "CR" : 0, "Name" : "Hardware_ECC_Recovered" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" },
+				{ "240" : "RV", "CR" : 0, "Name" : "Head_Flying_Hours" },
+				{ "241" : "RV", "CR" : 0, "Name" : "Total_LBAs_Written" },
+				{ "242" : "RV", "CR" : 0, "Name" : "Total_LBAs_Read" }
+			]
+		},
+		"WD RE3": {
+			"Device": ["WDC WD5002ABYS-02B1B0"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "11" : "NV", "CR" : 0, "Name" : "Calibration_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "193" : "NV", "CR" : 0, "Name" : "Load_Cycle_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "196" : "NV", "CR" : 0, "Name" : "Reallocated_Event_Count" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" },
+				{ "200" : "NV", "CR" : 0, "Name" : "Multi_Zone_Error_Rate" }
+			]
+		},
+		"WD RE4": {
+			"Device": ["WDC WD2004FBYZ-01YCBB1", "WDC WD5003ABYX-01WERA0", "WDC WD5003ABYX-01WERA1", "WDC WD5003ABYZ-011FA0"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "11" : "NV", "CR" : 0, "Name" : "Calibration_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "16" : "RV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "183" : "NV", "CR" : 0, "Name" : "Runtime_Bad_Block" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "193" : "NV", "CR" : 0, "Name" : "Load_Cycle_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "196" : "NV", "CR" : 0, "Name" : "Reallocated_Event_Count" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" },
+				{ "200" : "NV", "CR" : 0, "Name" : "Multi_Zone_Error_Rate" }
+			]
+		},
+		"Samsung Spinpoint F3": {
+			"Device": ["SAMSUNG HD103SJ"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "2" : "NV", "CR" : 0, "Name" : "Throughput_Performance" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "8" : "NV", "CR" : 0, "Name" : "Seek_Time_Performance" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "11" : "NV", "CR" : 0, "Name" : "Calibration_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "191" : "NV", "CR" : 0, "Name" : "G-Sense_Error_Rate" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "195" : "NV", "CR" : 0, "Name" : "Hardware_ECC_Recovered" },
+				{ "196" : "NV", "CR" : 0, "Name" : "Reallocated_Event_Count" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" },
+				{ "200" : "NV", "CR" : 0, "Name" : "Multi_Zone_Error_Rate" },
+				{ "223" : "NV", "CR" : 0, "Name" : "Load_Retry_Count" },
+				{ "225" : "NV", "CR" : 0, "Name" : "Load_Cycle_Count" }
+			]
+		},
+		"Seagate Barracuda SpinPoint F3": {
+			"Device": ["ST1000DM005 HD103SJ"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "2" : "NV", "CR" : 0, "Name" : "Throughput_Performance" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "8" : "NV", "CR" : 0, "Name" : "Seek_Time_Performance" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "11" : "NV", "CR" : 0, "Name" : "Calibration_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "191" : "NV", "CR" : 0, "Name" : "G-Sense_Error_Rate" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "195" : "NV", "CR" : 0, "Name" : "Hardware_ECC_Recovered" },
+				{ "196" : "NV", "CR" : 0, "Name" : "Reallocated_Event_Count" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" },
+				{ "200" : "NV", "CR" : 0, "Name" : "Multi_Zone_Error_Rate" },
+				{ "223" : "NV", "CR" : 0, "Name" : "Load_Retry_Count" },
+				{ "225" : "NV", "CR" : 0, "Name" : "Load_Cycle_Count" }
+			]
+		},
+		"Seagate Barracuda ES.2": {
+			"Device": ["ST3250310NS"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "9" : "NV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "184" : "NV", "CR" : 0, "Name" : "End-to-End_Error" },
+				{ "187" : "NV", "CR" : 0, "Name" : "Reported_Uncorrect" },
+				{ "188" : "NV", "CR" : 0, "Name" : "Command_Timeout" },
+				{ "189" : "NV", "CR" : 0, "Name" : "High_Fly_Writes" },
+				{ "190" : "RV", "CR" : 1, "Name" : "Airflow_Temperature_Cel" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "195" : "NV", "CR" : 0, "Name" : "Hardware_ECC_Recovered" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" }
+			]
+		},
+		"Hitachi Deskstar E7K500": {
+			"Device": ["HDS725050KLA360"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "2" : "NV", "CR" : 0, "Name" : "Throughput_Performance" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "8" : "NV", "CR" : 0, "Name" : "Seek_Time_Performance" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "193" : "RV", "CR" : 0, "Name" : "Load_Cycle_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "196" : "NV", "CR" : 0, "Name" : "Reallocated_Event_Count" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" }
+			]
+		},
+		"HGST He12": {
+			"Device": ["HGST HUH721212ALN600"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "2" : "NV", "CR" : 0, "Name" : "Throughput_Performance" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "RV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "8" : "NV", "CR" : 0, "Name" : "Seek_Time_Performance" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "12" : "RV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "22" : "RV", "CR" : 0, "Name" : "Unknown_Attribute" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "193" : "RV", "CR" : 0, "Name" : "Load_Cycle_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "196" : "NV", "CR" : 0, "Name" : "Reallocated_Event_Count" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" }
+			]
+		},
+		"Seagate Constellation CS": {
+			"Device": ["ST1000NC001-1DY162"],
+			"ID#": [
+				{ "1" : "NV", "CR" : 0, "Name" : "Raw_Read_Error_Rate" },
+				{ "3" : "NV", "CR" : 0, "Name" : "Spin_Up_Time" },
+				{ "4" : "NV", "CR" : 0, "Name" : "Start_Stop_Count" },
+				{ "5" : "NV", "CR" : 0, "Name" : "Reallocated_Sector_Count" },
+				{ "7" : "NV", "CR" : 0, "Name" : "Seek_Error_Rate" },
+				{ "9" : "RV", "CR" : 0, "Name" : "Power_On_Hours" },
+				{ "10" : "NV", "CR" : 0, "Name" : "Spin_Retry_Count" },
+				{ "12" : "NV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "184" : "NV", "CR" : 0, "Name" : "End-to-End_Error" },
+				{ "187" : "NV", "CR" : 0, "Name" : "Reported_Uncorrect" },
+				{ "188" : "NV", "CR" : 0, "Name" : "Command_Timeout" },
+				{ "189" : "NV", "CR" : 0, "Name" : "High_Fly_Writes" },
+				{ "190" : "NV", "CR" : 0, "Name" : "Power_Cycle_Count" },
+				{ "191" : "NV", "CR" : 0, "Name" : "G-Sense_Error_Rate" },
+				{ "192" : "NV", "CR" : 0, "Name" : "Power-Off_Retract_Count" },
+				{ "193" : "RV", "CR" : 0, "Name" : "Load_Cycle_Count" },
+				{ "194" : "RV", "CR" : 1, "Name" : "Temperature_Celsius" },
+				{ "197" : "NV", "CR" : 0, "Name" : "Current_Pending_Sector" },
+				{ "198" : "NV", "CR" : 0, "Name" : "Offline_Uncorrectable" },
+				{ "199" : "NV", "CR" : 0, "Name" : "UDMA_CRC_Error_Count" }
 			]
 		}
 	}

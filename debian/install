@@ -1,1 +1,3 @@
 check_smartvalues /usr/lib/nagios/plugins/
+check_smartvalues.cfg.json /etc/icinga2/
+check_smartvalues.db.json /etc/icinga2/

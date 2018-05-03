@@ -6,6 +6,11 @@ Files: debian/*
 Copyright: 2018 Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>
 License: GPL-2.0+
 
+Files: check_smartvalues.*.json
+Copyright: 2018 Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>
+  2015 Enrico Labedzki <enrico.labedzki@netways.de>
+License: GPL-2.0+
+
 Files: *
 Copyright: 2015 Enrico Labedzki <enrico.labedzki@netways.de>
 License: GPL-2.0+
