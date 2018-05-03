@@ -1,0 +1,5 @@
+check-smartvalues (0.4-1) unstable; urgency=medium
+
+  * Initial release, corresponds to upstream 0.4
+
+ -- Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>  Wed, 03 May 2018 20:42:45 +0200
