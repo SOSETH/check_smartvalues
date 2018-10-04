@@ -1,3 +1,9 @@
+check-smartvalues (0.4-1.2) unstable; urgency=medium
+
+  * Stop prepeding the device to perfdata fields
+
+ -- Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>  Thu, 04 Oct 2018 19:00:49 +0200
+
 check-smartvalues (0.4-1.1) unstable; urgency=medium
 
   * Add support for lots of disks
