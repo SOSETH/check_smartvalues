@@ -1,0 +1,34 @@
+variables:
+  DISTRIBUTION_VER: "buster"
+  APT_REPO: "sos-buster"
+
+image: soseth/debian-ci-base:$DISTRIBUTION_VER
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  before_script:
+    - apt-get update -qq
+    - apt-get upgrade -qq
+    - apt-get install -qq libexception-class-perl libjson-xs-perl libswitch-perl libtext-trim-perl libtry-tiny-perl
+  script:
+    - dpkg-buildpackage -uc -us
+    - mkdir build
+    - mv ../check-smartvalues*.* build/
+  artifacts:
+    paths:
+    - build/*
+
+deploy_to_apt:
+  stage: deploy
+  script:
+    - echo "Deploying package to $APT_REPO repo and $DISTRIBUTION_VER version"
+    - sudo -u repo aptly repo add $APT_REPO build/*.deb
+    - sudo -u repo aptly publish update $DISTRIBUTION_VER $DISTRIBUTION_VER
+  only:
+    - tags
+  tags:
+    - apt
