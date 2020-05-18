@@ -1,4 +1,4 @@
-check-smartvalues (0.4+3) UNRELEASED; urgency=medium
+check-smartvalues (0.4+3) unstable; urgency=medium
 
   * Enable GitLab CI
   * debian: switch to 3.0 (native)
