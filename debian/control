@@ -3,8 +3,11 @@ Section: devel
 Priority: optional
 Maintainer: Maximilian Falkenstein <mfalkenstein@sos.ethz.ch>
 Build-Depends: debhelper (>= 9),
-  libswitch-perl, libjson-xs-perl, libtext-trim-perl, libtry-tiny-perl,
-  libexception-class-perl
+               libexception-class-perl,
+               libjson-xs-perl,
+               libswitch-perl,
+               libtext-trim-perl,
+               libtry-tiny-perl
 Standards-Version: 3.9.8
 Homepage: https://github.com/NETWAYS/check_smartvalues
 Vcs-Git: https://github.com/SOSETH/check_smartvalues.git
@@ -12,6 +15,11 @@ Vcs-Browser: https://github.com/SOSETH/check_smartvalues
 
 Package: check-smartvalues
 Architecture: all
-Depends: ${perl:Depends}, smartmontools, libswitch-perl, libjson-xs-perl,
-  libtext-trim-perl, libtry-tiny-perl, libexception-class-perl
+Depends: libexception-class-perl,
+         libjson-xs-perl,
+         libswitch-perl,
+         libtext-trim-perl,
+         libtry-tiny-perl,
+         smartmontools,
+         ${perl:Depends}
 Description: Check disk's SMART values
