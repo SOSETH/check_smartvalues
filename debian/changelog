@@ -1,3 +1,10 @@
+check-smartvalues (0.4+3) UNRELEASED; urgency=medium
+
+  * Enable GitLab CI
+  * debian: switch to 3.0 (native)
+
+ -- Peter Keresztes Schmidt <peterke@sos.ethz.ch>  Mon, 18 May 2020 12:04:09 +0200
+
 check-smartvalues (0.4-1.2) unstable; urgency=medium
 
   * Stop prepeding the device to perfdata fields
